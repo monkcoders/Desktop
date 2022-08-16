@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Builder</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+
+  </head>
+  <body>
+    <div id="form-cv">
+      <div class="container">
+        <h1>Resume Builder</h1>
+        <br />
+        <div class="col-one">
+          <label for="name">Name</label>
+          <br>
+          <input id="name" type="text" name="name" />
+          <br />
+
+          <!-- <label for="profession">Profession</label>
+        <input type="text" id="profession" name="profession">
+        <br> -->
+
+          <label for="phoneNo">Phone number</label>
+          <br>
+          <input type="number" id="phoneNo" name="phoneNo" />
+          <br />
+
+          <label for="emailId">Email Id</label>
+          <br>
+          <input type="email" name="emailId" id="emailId" />
+          <br />
+
+          <label for="address">Address</label>
+          <br>
+          <input type="text" id="address" name="address" />
+          <br />
+
+          <label for="nationality">Nationality</label>
+          <br>
+          <input type="text" id="nationality" name="nationality" />
+          <br />
+
+          <label for="linkedin">Linkedin Profile id</label>
+          <br>
+          <input type="url" name="linkedin" id="linkedin" />
+          <br />
+        </div>
+        <div class="col-two">
+          <label for="objective">Objective</label>
+          <br>
+          <textarea name="objective" id="objective" cols="30" rows="3">
+Enter your objective here</textarea
+          >
+
+          <br />
+
+          <label for="workexp">Work Experience</label>
+          <br>
+          <textarea name="workexp" id="workexp" cols="30" rows="3">
+Your work Experience</textarea
+          >
+          <br />
+
+          <label for="aqual">Academic Qualification</label>
+          <br>
+          <textarea name="aqual" id="aqual" cols="30" rows="3"></textarea>
+        </div>
+      </div>
+      <button name="generatecv" onclick="generateCV()">Generate Resume</button>
+    </div>
+    <!-- final-cv -->
+    <div id="final-cv">
+      <div class="headerT">
+        <h1 id="nameT" class="headerTC">Name</h1>
+        <br />
+        <p id="addressT" class="headerTC">address</p>
+        <p id="emailIdT" class="headerTC">Email id</p>
+        <p id="phoneNoT" class="headerTC">+91895357</p>
+        <br />
+        <p id="nationalityT" class="headerTC">Nationality</p>
+        <p id="linkedinT" class="headerTC">Linked in</p>
+      </div>
+      <!-- objective  -->
+      <div class="details">
+        <div class="objectiveDiv">
+          <h3 class="headings">Objective</h3>
+          <hr />
+          <p id="objectiveT">
+            objective topic Lorem ipsum dolor sit, amet consectetur adipisicing
+            elit. Officia repellat debitis ducimus quas, error tempore dolorum
+            omnis hic dolore, quis aliquid quidem repudiandae accusamus
+            provident, tenetur nam at odio. Pariatur sint blanditiis ab est
+            adipisci, eligendi ipsa consequatur eveniet hic, ducimus laudantium
+            natus? Cum, laborum numquam fugit labore quibusdam ut.
+          </p>
+        </div>
+        <!-- work experience  -->
+        <div class="workexpDiv">
+          <h3 class="headings">Work Experience</h3>
+          <hr />
+          <p id="workexpT">Work experience topic</p>
+        </div>
+
+        <div class="aqualDiv">
+          <h3 class="headings">Academic Qualification</h3>
+          <hr />
+          <p id="aqualT">Academic topic</p>
+        </div>
+      </div>
+      <button onclick="printCV()" id="printcv">Print</button>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
