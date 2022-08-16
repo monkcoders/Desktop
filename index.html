@@ -51,29 +51,35 @@
           <br>
           <input type="url" name="linkedin" id="linkedin" />
           <br />
-        </div>
-        <div class="col-two">
           <label for="objective">Objective</label>
           <br>
-          <textarea name="objective" id="objective" cols="30" rows="3">
-Enter your objective here</textarea
-          >
+          <textarea name="objective" id="objective" cols="30" rows="3">Enter your objective here</textarea>
+          <br>
+        </div>
+        <div class="col-two">
+          
 
-          <br />
-
+          
+          <div id="we">
           <label for="workexp">Work Experience</label>
           <br>
-          <textarea name="workexp" id="workexp" cols="30" rows="3">
-Your work Experience</textarea
-          >
+          <textarea name="workexp" class="workexp" cols="30" rows="3">
+Your work Experience</textarea>
+          <br>
+          <button onclick="addwe()" class="add" id="webtn">Add</button>
+        </div>
           <br />
-
+          
+        <div id="aq">
           <label for="aqual">Academic Qualification</label>
           <br>
-          <textarea name="aqual" id="aqual" cols="30" rows="3"></textarea>
+          <textarea name="aqual" class="aqual" cols="30" rows="3"></textarea>
+          <br>
+          <button onclick="addaq()" id="aqbtn" class="add">Add</button>
+        </div>
         </div>
       </div>
-      <button name="generatecv" onclick="generateCV()">Generate Resume</button>
+      <button name="generatecv" onclick="generateCV()" class="btn">Generate Resume</button>
     </div>
     <!-- final-cv -->
     <div id="final-cv">
@@ -107,14 +113,16 @@ Your work Experience</textarea
           <hr />
           <p id="workexpT">Work experience topic</p>
         </div>
+        
 
         <div class="aqualDiv">
           <h3 class="headings">Academic Qualification</h3>
           <hr />
           <p id="aqualT">Academic topic</p>
         </div>
+        
       </div>
-      <button onclick="printCV()" id="printcv">Print</button>
+      <button onclick="printCV()" class="btn" id="printcv">Print</button>
     </div>
     <script src="scripts.js"></script>
   </body>

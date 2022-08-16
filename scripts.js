@@ -14,9 +14,20 @@ function generateCV() {
 
     document.getElementById('objectiveT').innerHTML = document.getElementById('objective').value;
 
-    document.getElementById('workexpT').innerHTML = document.getElementById('workexp').value;
+    
+    let wes = document.getElementsByClassName('workexp');
+    let str = "";
+    for(let e of wes){
+        str = str+ '<li> ' +e.value+' </li>';
+    }
+    document.getElementById('aqualT').innerHTML=str;
 
-    document.getElementById('aqualT').innerHTML = document.getElementById('aqual').value;
+    let aqs = document.getElementsByClassName('aqual');
+    let straq = "";
+    for(let e of aqs){
+        straq = straq+ '<li> ' +e.value+' </li>';
+    }
+    document.getElementById('workexpT').innerHTML=str;
 
     document.getElementById("form-cv").style.display='none'
     document.getElementById("final-cv").style.display='block'
@@ -29,4 +40,36 @@ function printCV() {
     document.getElementById('printcv').style.display='block';
     document.getElementById('printcv').style.margin ='auto auto 10px';
 
+}
+
+function addwe(){
+    let newTextArea= document.createElement('textarea');
+    
+    newTextArea.classList.add('workexp');
+    newTextArea.setAttribute('rows', 3);
+    newTextArea.setAttribute('cols',30);
+    newTextArea.style.display='block';
+
+
+
+    let weObj = document.getElementById('we');
+    let beforeObj = document.getElementById('webtn');
+
+    weObj.insertBefore(newTextArea,beforeObj);
+    
+}
+
+function addaq(){
+    let newTextArea= document.createElement('textarea');
+    
+    newTextArea.classList.add('aqual');
+    newTextArea.setAttribute('rows', 3);
+    newTextArea.setAttribute('cols',30);
+    newTextArea.style.display='block';
+
+    let aqObj = document.getElementById('aq');
+    let beforeObj = document.getElementById('aqbtn');
+
+    aqObj.insertBefore(newTextArea,beforeObj);
+    
 }
