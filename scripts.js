@@ -20,14 +20,21 @@ function generateCV() {
     for(let e of wes){
         str = str+ '<li> ' +e.value+' </li>';
     }
-    document.getElementById('aqualT').innerHTML=str;
+    document.getElementById('workexpT').innerHTML=str;
 
     let aqs = document.getElementsByClassName('aqual');
     let straq = "";
-    for(let e of aqs){
-        straq = straq+ '<li> ' +e.value+' </li>';
+    for(let m of aqs){
+        straq = straq+ '<li> ' +m.value+' </li>';
     }
-    document.getElementById('workexpT').innerHTML=str;
+    document.getElementById('aqualT').innerHTML=straq;
+
+    let sks = document.getElementsByClassName('skill');
+    let strsk = "";
+    for(let n of sks){
+        strsk = strsk+ '<li> ' +n.value+' </li>';
+    }
+    document.getElementById('skillT').innerHTML=strsk;
 
     document.getElementById("form-cv").style.display='none'
     document.getElementById("final-cv").style.display='block'
@@ -71,5 +78,20 @@ function addaq(){
     let beforeObj = document.getElementById('aqbtn');
 
     aqObj.insertBefore(newTextArea,beforeObj);
+    
+}
+
+function addskill(){
+    let newTextArea= document.createElement('textarea');
+    
+    newTextArea.classList.add('skill');
+    newTextArea.setAttribute('rows', 3);
+    newTextArea.setAttribute('cols',30);
+    newTextArea.style.display='block';
+
+    let skObj = document.getElementById('sk');
+    let beforeObj = document.getElementById('skbtn');
+
+    skObj.insertBefore(newTextArea,beforeObj);
     
 }
